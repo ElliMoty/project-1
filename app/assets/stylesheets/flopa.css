@@ -79,6 +79,8 @@ input {
     text-align: center;
 }
 
+
+/*********** show page **************/
 .show {
     width: 960px;
     height: 450px;
@@ -97,11 +99,9 @@ input {
 }
 
 button {
-    width: 120px;
     height: 30px;
     border-radius: 8px;
-    margin: 15px 10px 15px 0;
-    position: relative;
+    margin: 15px 0;
     font-size: 15px;
     background: #3a6b90;
     box-shadow: 5px 5px 20px black;
@@ -110,4 +110,10 @@ button {
 .price {
     text-align: center;
     font-size: 24px;
+}
+
+/* ########## confirmation page ########### */
+
+.return-home {
+    width: 120px;
 }
