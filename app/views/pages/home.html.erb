@@ -1,0 +1,11 @@
+<h1>Welcome to Flopa</h1>
+
+<% @products.each do |product| %>
+    <div class="grid-container">
+        <div class="grid-item">
+            <%= link_to image_tag(product.image, :class => "thumb"), product %>
+            <p><%= product.name %></p>
+        </div>
+        
+    </div>
+<% end %> 
