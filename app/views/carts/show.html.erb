@@ -1,0 +1,10 @@
+<h1>Your cart list</h1>
+<ul>
+    <li>
+        <%= @order.id %>
+        <%=  %>
+    </li>
+</ul>
+
+<button class="return-home"><%= link_to 'Home', root_path %></button>
+<button class="buy"><%= link_to 'Buy', confirmation_path %></button>

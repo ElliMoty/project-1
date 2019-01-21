@@ -6,5 +6,9 @@
 
 <div class="show">
     <h3 class="show-item price">$<%= @product.price %></h3>
-    <button class="show-item"><%= link_to 'Buy', confirmation_path %></button>
+
+
+    <button class="show-item"><%= link_to 'Add to Cart', carts_show_path %></button>
+
+
 </div>
