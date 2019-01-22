@@ -1,0 +1,11 @@
+<h2>All order list:</h2>
+<% @orders.each do |order| %>
+    <ul>
+        <li><%= order.id %></li> 
+    </ul>
+<% end %>
+
+<button class="return-home"><%= link_to 'Home', root_path %></button>
+
+
+<button class="buy"><%= link_to 'Buy', confirmation_path %></button>

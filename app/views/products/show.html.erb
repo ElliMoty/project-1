@@ -7,8 +7,14 @@
 <div class="show">
     <h3 class="show-item price">$<%= @product.price %></h3>
 
+    
+   <p><%= form_for @order do |f| %>
+        <%= f.label :date %>
+        <%= f.date_field :date %>
+        <%= f.hidden_field :confirmed, value: true %>
 
-    <button class="show-item"><%= link_to 'Add to Cart', carts_show_path %></button>
+    <%= f.submit "Add to cart" %>
+  <% end %></p>
 
 
 </div>
