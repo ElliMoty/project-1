@@ -1,25 +1,28 @@
 class OrdersController < ApplicationController
+  # /orders
   def index
     @orders = Order.all 
   end
 
-  def create
-    order = Order.create order_params
-    redirect_to orders_path
+  def add_to_cart
+    product = Product.find params[:id]
+    orders = @current_user.orders
+    if orders.empty?
+      order = Order.new
+      order.save
+      orders << order
+    end
+    @current_user.orders.last.products << product
+    redirect_to @current_user.orders.last
   end
 
   def confirmation
   end
 
-  def add_to_cart
-    # product = Product.find params[:id]
-    # @current_user.orders.last.products << product
-    # redirect_to @current_user.orders.last
+  # orders/:id
+  def show
+    @order = Order.find params[:id]
+    @products = @order.products
   end
-
-  def order_params
-    params.require(:order).permit(:date)
-  end
-
 
 end

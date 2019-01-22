@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get '/login' => 'session#new'
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
-  
+
+  post '/products/:id/add_to_cart', to: 'orders#add_to_cart', as: 'add_to_cart'
+    
   get '/confirmation' => 'orders#confirmation'
 
 end
