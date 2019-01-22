@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 
   post '/products/:id/add_to_cart', to: 'orders#add_to_cart', as: 'add_to_cart'
     
-  get '/confirmation' => 'orders#confirmation'
+  get '/orders/:id/confirmation', to: 'orders#confirmation', as: 'confirmation'
 
 end
