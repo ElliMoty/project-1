@@ -27,13 +27,20 @@ class OrdersController < ApplicationController
 
   # /confirmation
   def confirmation
+    products = @current_user.orders.last.products
+    products_by_id = products.to_a.group_by { |p| p.id }
+    products_by_id.each do |id, list_of_products_with_same_id|
+      product = list_of_products_with_same_id[0]
+      product.quantity = product.quantity - list_of_products_with_same_id.size
+      product.save
+    end
+
     orders = @current_user.orders
     current_order = orders.last
     current_order.order_date = Time.now
     current_order.save
     order = Order.new
     orders.push(order)
-   
   end
 
 end

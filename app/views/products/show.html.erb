@@ -1,14 +1,19 @@
 <h1><%= @product.name.capitalize %></h1>
 <div class="show">
         <div class="show-item"><%= image_tag @product.image, :class => "feature" %></div>
-        <p class="show-item desc"><%= @product.description %> <%= @product.quantity %></p>
+        <p class="show-item desc"><%= @product.description %> 
+</div>
+
+<div class="quantity">
+        <% if @product.quantity > 0  %>
+                <p> Number of products: <%= @product.quantity %></p>
+        <% else %>
+                <p>Sold Out!</p>
+        <% end %>
+
 </div>
 
 <div class="show">
     <h3 class="show-item price">$<%= @product.price %></h3>
-
-    
    <button><%= link_to 'Add to Cart', add_to_cart_path(@product), :method => 'post' %></button>
-
-
 </div>
