@@ -1,7 +1,7 @@
 <h1><%= @product.name.capitalize %></h1>
 <div class="show">
         <div class="show-item"><%= image_tag @product.image, :class => "feature" %></div>
-        <p class="show-item desc"><%= @product.description %></p>
+        <p class="show-item desc"><%= @product.description %> <%= @product.quantity %></p>
 </div>
 
 <div class="show">

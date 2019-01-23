@@ -17,6 +17,7 @@
         <% end %>  
         <span> Hi <%= @current_user.name.capitalize %></span> 
         <span><%= link_to 'Home', root_path %></span> 
+        <span><%= link_to 'My Cart', @current_user.orders.last %></span>
 
         <span><%= link_to 'My Orders', orders_path %></span> 
         <span><%= link_to "Sign out", login_path, :method => 'delete' %></span>

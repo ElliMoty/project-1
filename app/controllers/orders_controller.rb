@@ -5,6 +5,13 @@ class OrdersController < ApplicationController
     @orders = @orders.to_a
     @orders.pop
   end
+
+  # orders/:id
+  def show
+    @order = Order.find params[:id]
+    @products = @order.products
+  end
+
  
   # orders/add_to_cart
   def add_to_cart
@@ -23,13 +30,9 @@ class OrdersController < ApplicationController
   def confirmation
     orders = @current_user.orders
     order = Order.new
-    orders.push(order) 
-  end
+    orders.push(order)
 
-  # orders/:id
-  def show
-    @order = Order.find params[:id]
-    @products = @order.products
+    @quantity = Product.quantity
   end
 
 end
