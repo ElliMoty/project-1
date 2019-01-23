@@ -16,11 +16,13 @@ class OrdersController < ApplicationController
   def add_to_cart
     product = Product.find params[:id]
     orders = @current_user.orders
+    
     if orders.empty?
       order = Order.new
       order.save
       orders << order
     end
+
     @current_user.orders.last.products << product
     redirect_to @current_user.orders.last
   end
@@ -29,6 +31,7 @@ class OrdersController < ApplicationController
   def confirmation
     products = @current_user.orders.last.products
     products_by_id = products.to_a.group_by { |p| p.id }
+
     products_by_id.each do |id, list_of_products_with_same_id|
       product = list_of_products_with_same_id[0]
       product.quantity = product.quantity - list_of_products_with_same_id.size

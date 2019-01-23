@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
   def home
-    @products = Product.all
   end 
 
-  def index
+  def flopa
+    @products = Product.all
   end
 end

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   post '/login' => 'session#create'
   delete '/login' => 'session#destroy'
 
+  get '/flopa' => 'pages#flopa'
+  
   post '/products/:id/add_to_cart', to: 'orders#add_to_cart', as: 'add_to_cart'
     
   get '/orders/:id/confirmation', to: 'orders#confirmation', as: 'confirmation'

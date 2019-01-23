@@ -7,7 +7,7 @@ class SessionController < ApplicationController
        if user.present? && user.authenticate(params[:password])
           session[:user_id] = user.id
           flash[:notice] = "User was successfully created!"
-          redirect_to root_path
+          redirect_to flopa_path
        else
         flash[:error_message] = 'Invalid email or password'
         redirect_to login_path
@@ -16,7 +16,7 @@ class SessionController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to login_path
+    redirect_to root_path
   end
 
 end
