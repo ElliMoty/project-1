@@ -3,7 +3,7 @@
     <% unless order.products.empty? %>
     <ul>
         <li>
-            <p><%= order.products.size %> products in <%= order.created_at.strftime("%d/%m/%Y") %> at <%= order.created_at.strftime("%I:%M %p") %></p> 
+            <p><%= order.products.size %> products in <%= order.order_date.try(:in_time_zone, 'Australia/Sydney').try(:strftime, "%d/%m/%Y")  %> at <%= order.order_date.try(:in_time_zone, 'Australia/Sydney').try(:strftime, "%I:%M %p") %></p>
         </li>
     </ul>
     <% end %>

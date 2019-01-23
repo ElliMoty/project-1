@@ -12,7 +12,6 @@ class OrdersController < ApplicationController
     @products = @order.products
   end
 
- 
   # orders/add_to_cart
   def add_to_cart
     product = Product.find params[:id]
@@ -29,10 +28,12 @@ class OrdersController < ApplicationController
   # /confirmation
   def confirmation
     orders = @current_user.orders
+    current_order = orders.last
+    current_order.order_date = Time.now
+    current_order.save
     order = Order.new
     orders.push(order)
-
-    @quantity = Product.quantity
+   
   end
 
 end
