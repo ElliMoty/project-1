@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'rails_12factor', group: :production
 
+
 gem 'pg_search'
 
 # Use ActiveStorage variant
