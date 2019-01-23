@@ -1,7 +1,9 @@
 class OrdersController < ApplicationController
   # /orders
   def index
-    @orders = Order.all 
+    @orders = Order.all
+    @orders = @orders.to_a
+    @orders.pop
   end
  
   # orders/add_to_cart

@@ -1,0 +1,11 @@
+<h2>Your Orders History</h2>
+<% @orders.each do |order| %>
+    <% unless order.products.empty? %>
+    <ul>
+        <li>
+            <p><%= order.products.size %> products in <%= order.created_at.strftime("%d/%m/%Y") %> at <%= order.created_at.strftime("%I:%M %p") %></p> 
+        </li>
+    </ul>
+    <% end %>
+<% end %>
+

@@ -1,0 +1,9 @@
+<h3>Your search results:</h3>
+<% @products.each do |product| %>
+    <div class="grid-container">
+        <div class="grid-item">
+            <%= link_to image_tag(product.image, :class => "thumb"), product %>
+            <p><%= product.name %></p>
+        </div>
+    </div>
+<% end %> 
