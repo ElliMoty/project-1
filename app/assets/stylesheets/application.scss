@@ -65,11 +65,11 @@ h1, h2, h3, p {
     color: red;
 }
 
-.panel1 { background-image:url("gardening1.jpg"); }
-.panel2 { background-image:url("gardening2.jpg"); }
-.panel3 { background-image:url("bg-middle.jpg"); }
-.panel4 { background-image:url("gardening3.jpg"); }
-.panel5 { background-image:url("gardening4.jpg"); }
+.panel1 { background-image:url("/assets/gardening1.jpg"); }
+.panel2 { background-image:url("/assets/gardening2.jpg"); }
+.panel3 { background-image:url("/assets/bg-middle.jpg"); }
+.panel4 { background-image:url("/assets/gardening3.jpg"); }
+.panel5 { background-image:url("/assets/gardening4.jpg"); }
 
   /* Flex Items */
 .panel > * {
