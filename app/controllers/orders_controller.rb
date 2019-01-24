@@ -14,12 +14,12 @@ class OrdersController < ApplicationController
 
   def delete_product 
     order = Order.find params[:order_id]
-    products = order.products
-    productToDelete = products[params[:product_index].to_i]
-    
-    # order.save
+    products = order.products.to_a
+    indexToDel = params[:product_index].to_i
+    products.delete_at(indexToDel)
+    order.products = products
 
-    if @current_user.orders.last.present?
+    if products.empty?
       redirect_to flopa_path
     else
       redirect_to @current_user.orders.last
