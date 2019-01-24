@@ -12,11 +12,26 @@ class OrdersController < ApplicationController
     @products = @order.products
   end
 
+  def delete_product 
+    order = Order.find params[:order_id]
+    products = order.products
+    productToDelete = products[params[:product_index].to_i]
+    
+    # order.save
+
+    if @current_user.orders.last.present?
+      redirect_to flopa_path
+    else
+      redirect_to @current_user.orders.last
+    end
+
+  end
+
   # orders/add_to_cart
   def add_to_cart
     product = Product.find params[:id]
     orders = @current_user.orders
-    
+
     if orders.empty?
       order = Order.new
       order.save
@@ -26,6 +41,8 @@ class OrdersController < ApplicationController
     @current_user.orders.last.products << product
     redirect_to @current_user.orders.last
   end
+
+ 
 
   # /confirmation
   def confirmation
@@ -45,5 +62,6 @@ class OrdersController < ApplicationController
     order = Order.new
     orders.push(order)
   end
+
 
 end

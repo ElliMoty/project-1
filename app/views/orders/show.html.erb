@@ -1,7 +1,10 @@
 <h2>Your Cart</h2>
-<% @products.each do |product| %>
+<% @products.each_with_index do |product, index| %>
     <ul>
-        <li><%= product.name %></li>
+        <li><%= product.name %>
+            <%= product.id %>
+            <%= link_to 'Delete', delete_order_product_path(@order.id, index), :method => "delete",  :data => {:confirm => "Are you sure?"} %>
+        </li>
     </ul>
 <% end %>
 

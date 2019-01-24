@@ -15,4 +15,6 @@ Rails.application.routes.draw do
     
   get '/orders/:id/confirmation', to: 'orders#confirmation', as: 'confirmation'
 
+  delete '/orders/:order_id/:product_index', to: 'orders#delete_product', as: 'delete_order_product'
+
 end
