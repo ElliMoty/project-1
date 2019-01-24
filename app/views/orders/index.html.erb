@@ -1,11 +1,14 @@
 <h2>Your Orders History</h2>
-<% @orders.each do |order| %>
-    <% unless order.products.empty? %>
-    <ul>
-        <li>
-            <p><%= order.products.size %> products in <%= order.order_date.try(:in_time_zone, 'Australia/Sydney').try(:strftime, "%d/%m/%Y")  %> at <%= order.order_date.try(:in_time_zone, 'Australia/Sydney').try(:strftime, "%I:%M %p") %></p>
-        </li>
-    </ul>
+
+<div class="list-group list">
+    <% @orders.each do |order| %>
+        <% unless order.products.empty? %>
+            <ul>
+                <li class="list-group-item list-group-item-action list-group-item-secondary">
+                    <%= order.products.size %> products in <%= order.order_date.try(:in_time_zone, 'Australia/Sydney').try(:strftime, "%d/%m/%Y")  %> at <%= order.order_date.try(:in_time_zone, 'Australia/Sydney').try(:strftime, "%I:%M %p") %>
+                </li>
+            </ul>
+        <% end %>
     <% end %>
-<% end %>
+</div>
 

@@ -1,10 +1,12 @@
-<%# search results %>
-<h3> <%= @products.size %> results:</h3>
-<% @products.each do |product| %>
-    <div class="grid-container">
-        <div class="grid-item">
-            <%= link_to image_tag(product.image, :class => "thumb"), product %>
-            <p><%= product.name %></p>
+<h2> <%= @products.size %> results:</h2>
+
+<div class="products">
+    <% @products.each do |product| %>
+     <div class="border">
+        <div class="grid-container">
+            <%= link_to image_tag(product.image, :class => "thumb"), product, :class => "figure-img img-fluid rounded" %>
+            <figcaption class="figure-caption"><%= product.name %></figcaption>
         </div>
     </div>
-<% end %> 
+    <% end %> 
+</div>

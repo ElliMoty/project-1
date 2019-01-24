@@ -1,2 +1,46 @@
-<h1>Welcome to Flopa</h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam deserunt quod minus doloribus nihil molestiae corrupti, magnam quae nulla aspernatur? Cumque ex voluptate quidem architecto, odit quisquam soluta corporis dolore!</p>
+ <div class="panels">
+    <div class="panel panel1">
+      <p>Life begins the day</p>
+      <p class="red">F</p>
+      <p>you start a garden.</p>
+    </div>
+    <div class="panel panel2">
+      <p>Gardening adds years to your </p>
+      <p class="red">L</p>
+      <p>life and life to your years.</p>
+    </div>
+    <div class="panel panel3">
+      <p>let's buy some plants.</p>
+      <p class="red">O</p>
+      <p>Build your paradise!</p>
+    </div>
+    <div class="panel panel4">
+      <p>To plant a garden is</p>
+      <p class="red">P</p>
+      <p>to believe in tomorrow.</p>
+    </div>
+    <div class="panel panel5">
+      <p>There are always flowers for </p>
+      <p class="red">A</p>
+      <p>those who want to see them.</p>
+    </div>
+  </div>
+
+  <script>
+    const panels = document.querySelectorAll('.panel');
+
+    function toggleOpen() {
+      console.log('Hello');
+      this.classList.toggle('open');
+    }
+
+    function toggleActive(e) {
+      console.log(e.propertyName);
+      if (e.propertyName.includes('flex')) {
+        this.classList.toggle('open-active');
+      }
+    }
+
+    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
+  </script>

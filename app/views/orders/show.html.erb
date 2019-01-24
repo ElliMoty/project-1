@@ -1,11 +1,16 @@
 <h2>Your Cart</h2>
-<% @products.each_with_index do |product, index| %>
-    <ul>
-        <li><%= product.name %>
-            <%= product.id %>
-            <%= link_to 'Delete', delete_order_product_path(@order.id, index), :method => "delete" %>
-        </li>
-    </ul>
-<% end %>
 
-<button><%= link_to 'Buy', confirmation_path %></button>
+<div class="list-group list">
+    <% @products.each_with_index do |product, index| %>
+        <ul>
+            <li class="list-group-item list-group-item-action list-group-item-secondary">
+                <div class="d-flex justify-content-start"><%= product.name %></div>
+                <div class="d-flex justify-content-end" id="right"><%= link_to 'Delete', delete_order_product_path(@order.id, index), :class => "btn btn-secondary btn-sm", :method => "delete" %></div>
+            </li>
+        </ul>
+        
+    <% end %>
+</div>
+
+
+<%= link_to 'Buy', confirmation_path, :class => "buy-button btn btn-secondary btn-sm"%>

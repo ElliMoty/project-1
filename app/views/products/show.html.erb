@@ -1,19 +1,22 @@
-<h1><%= @product.name.capitalize %></h1>
-<div class="show">
-        <div class="show-item"><%= image_tag @product.image, :class => "feature" %></div>
-        <p class="show-item desc"><%= @product.description %> 
-</div>
+<h2 class="title"><%= @product.name.capitalize %></h2>
 
-<div class="quantity">
-        <% if @product.quantity > 0  %>
-                <p> Number of products: <%= @product.quantity %></p>
-        <% else %>
-                <p>Sold Out!</p>
-        <% end %>
-
-</div>
-
-<div class="show">
-    <h3 class="show-item price">$<%= @product.price %></h3>
-   <button><%= link_to 'Add to Cart', add_to_cart_path(@product), :method => 'post' %></button>
+<div class="product-show">
+        <div class="show">
+                <div class="show-item"><%= image_tag @product.image, :class => "feature" %></div>
+                <div class="show-item">
+                        <p class="show-item desc"><%= @product.description %></p>
+                        <div class="quantity">
+                                <% if @product.quantity > 0  %>
+                                        <p> Total number: <%= @product.quantity %></p>
+                                <% else %>
+                                        <p>Sold Out!</p>
+                                <% end %>
+                        </div>
+                </div>
+        </div>
+<br>
+        <div class="show">
+                <h3 class="show-item price">$<%= @product.price %></h3>
+                <%= link_to 'Add to Cart', add_to_cart_path(@product), :class => "show-item btn btn-secondary height", :method => 'post' %>
+        </div>
 </div>
