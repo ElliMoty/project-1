@@ -1,17 +1,26 @@
 <h1>Sign In</h1>
 
-<% if flash[:error_message].present? %>
-    <p><%= flash[:error_message] %></p>
-<% end %>    
+<div class="form">
 
-<%= form_tag login_path do %>
-    
-    <%= label_tag :email %>
-    <%= email_field_tag :email %>
+    <% if flash[:error_message].present? %>
+        <div class="alert alert-danger" role="alert">
+            <p><%= flash[:error_message] %></p>
+        </div>
+    <% end %>    
 
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
+    <%= form_tag login_path do %>
+        <div class="form-group">
+            <%= label_tag :email, nil, :class => "form-center" %>
+            <%= email_field_tag :email, nil, :class => "form-control form-center", :placeholder => "Enter email", :required => true %>
+        </div>
 
-    <%= submit_tag 'Sign In', :class => 'sign-in'%>
+        <div class="form-group">
+            <%= label_tag :password, nil, :class => "form-center" %>
+            <%= password_field_tag :password, nil, :class => "form-control form-center", :placeholder => "Password", :required => true %>
+        </div>
 
-<% end %>    
+        <%= submit_tag 'Sign In', :class => 'btn btn-secondary login mx-auto'%>
+
+    <% end %> 
+
+</div>   

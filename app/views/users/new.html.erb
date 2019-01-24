@@ -1,26 +1,40 @@
 <h1>Sign Up</h1>
 
-<% if @user.errors.any? %>
-    <ul>
-        <% @user.errors.full_messages.each do |msg| %>
-           <li><%= msg %></li> 
-        <% end %>    
-    </ul>
-<% end %>    
+<div class="form">
 
+    <% if @user.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+            <ul>
+                <% @user.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li> 
+                <% end %>    
+            </ul>
+        </div>
+    <% end %> 
 
-<%= form_for @user do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name, :required => true %>
+    <%= form_for @user do |f| %>
+        <div class="form-group">
+            <%= f.label :name, :class => "form-center" %>
+            <%= f.text_field :name, :class => "form-control form-center", :placeholder => "Enter your name", :required => true %>
+        </div>
 
-    <%= f.label :email %>
-    <%= f.email_field :email, :required => true %>
+        <div class="form-group">
+            <%= f.label :email, :class => "form-center" %>
+            <%= f.email_field :email, :class => "form-control form-center", :placeholder => "Enter email", :required => true %>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        
+        <div class="form-group">
+            <%= f.label :password, :class => "form-center" %>
+            <%= f.password_field :password, :class => "form-control form-center", :placeholder => "Password", :required => true %>
+        </div>
 
-    <%= f.label :password %>
-    <%= f.password_field :password, :required => true %>
+        <div class="form-group">
+            <%= f.label :password_confirmation, :class => "form-center" %>
+            <%= f.password_field :password_confirmation, :class => "form-control form-center", :placeholder => "Confirm your password", :required => true %>
+        </div>
 
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, :required => true %>
-
-    <%= f.submit 'Sign Up', :class => 'sign-up' %>
-<% end %>    
+        <%= f.submit 'Sign Up', :class => 'btn btn-secondary login mx-auto' %>
+    <% end %> 
+    
+</div>

@@ -1,10 +1,12 @@
-<h2>You are in <strong>Flo</strong>wers <strong>Pa</strong>radise!</h2>
+<h1 class="home-page">Welcome to <strong class="red">Flo</strong>wers <strong class="red">Pa</strong>radise!</h1>
 
-<% @products.each do |product| %>
-    <div class="grid-container">
-        <div class="grid-item">
-            <%= link_to image_tag(product.image, :class => "thumb"), product %>
-            <p><%= product.name %></p>
+<div class="products">
+    <% @products.each do |product| %>
+        <div class="border">
+            <div class="grid-container">
+                    <%= link_to image_tag(product.image, :class => "thumb"), product, :class => "figure-img img-fluid rounded" %>
+                    <figcaption class="figure-caption"><%= product.name %></figcaption>
+            </div>
         </div>
-    </div>
-<% end %> 
+    <% end %> 
+</div>

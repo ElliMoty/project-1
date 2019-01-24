@@ -3,7 +3,7 @@
     <ul>
         <li><%= product.name %>
             <%= product.id %>
-            <%= link_to 'Delete', delete_order_product_path(@order.id, index), :method => "delete",  :data => {:confirm => "Are you sure?"} %>
+            <%= link_to 'Delete', delete_order_product_path(@order.id, index), :method => "delete" %>
         </li>
     </ul>
 <% end %>

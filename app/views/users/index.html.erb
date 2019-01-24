@@ -1,4 +1,14 @@
 <h1>All Users</h1>
-<% @users.each do |user| %>
-    <p><%= user.name.capitalize %>: <%= user.email %></p>
-<% end %>    
+<div class="form">
+    <% @users.each do |user| %>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3"><%= user.name.capitalize %></span>
+            </div>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" value="<%= user.email %>">
+        </div>
+    <% end %> 
+</div>
+
+
+

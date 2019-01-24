@@ -1,0 +1,71 @@
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+// nav bar
+.logo {
+    color: red;
+    font-family: 'Lobster', cursive;
+    font-size: 30px; 
+}
+.logo:hover {
+    color: green;
+}
+
+.disabled {
+    text-shadow: 0 0 1px white;
+}
+
+// body
+
+h1 {
+    text-align: center;
+    margin: 10px 0; 
+}
+
+.red {
+    color: red;
+}
+
+.home-page {
+    font-family: 'Lobster', cursive;
+}
+
+.border {
+    border: 2px solid grey;
+    box-shadow: 0 0 2px gray;
+    widows: 200px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 20% 20% 20% 20% 20% ;
+}
+
+.products {
+    width: 800px;
+    margin: 0 auto;
+}
+.thumb {
+    max-width: 10em;
+    display: flex;
+    margin: 0 auto;
+}
+
+// sign In/Up
+
+.form {
+    max-width: 40%;
+    max-height: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-grow: 0;
+    flex-direction: column;
+}
+
+.login {
+    display: block;
+    width: 150px;
+}
+
+
