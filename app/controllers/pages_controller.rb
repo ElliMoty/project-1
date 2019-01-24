@@ -3,6 +3,6 @@ class PagesController < ApplicationController
   end 
 
   def flopa
-    @products = Product.all
+    @products = Product.order('name')
   end
 end
