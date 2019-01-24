@@ -1,10 +1,10 @@
-![Flopa Logo]()
+![Flopa Logo](https://raw.githubusercontent.com/ElliMoty/project-1/master/)
 
 # Project#1 (Flopa) 
 > Flopa is extracted from *Flo*wers *Pa*radise. It is a online shopping website in gardening which you can buy every thing you need to start your own small paradise in your house or expand it.
 
 ## Start shopping
-Demo [Flopa](https://ellimoty.github.io/project-1/.)
+Demo [Flopa](https://ellimoty.github.io/project-1/application.html.erb)
 
 ### Instructions
    + After signing up you have access to all products. If you can not find your item, search it. 
@@ -14,21 +14,21 @@ Demo [Flopa](https://ellimoty.github.io/project-1/.)
 
 
 #### Future steps
- + To make it possible to give chance to users to sell their products.
- + To added credit card and real shopping.
- + To add location of each product to make it optional for users to pick up their purchases by their own or choosing post option.
- + To add **review** part.
+  + To make it possible to give chance to users to sell their products.
+  + To added credit card and real shopping.
+  + To add location of each product to make it optional for users to pick up their purchases by their own or choosing post option.
+  + To add **review** part.
 
- #### Used technologies
+#### Used technologies
   + Ruby
   + Scss
   + Jquery
 
 #### Learnt method:
- + .group_by 
- + .deleted_at
- + .order("name)
+  + .group_by 
+  + .deleted_at
+  + .order("name)
 
 
 **Note** Enjoy! Feedback welcome. :blush:
-   + [![twitter](https://github.com/ElliMoty/Tic-Tac-Toe/blob/master/images/twitter_image.png)](https://twitter.com/ElliMotaghi)
+   + [![twitter](https://github.com/ElliMoty/project-1/blob/master/images/twitter_image.png)](https://twitter.com/ElliMotaghi)
