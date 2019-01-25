@@ -1,10 +1,10 @@
-![Flopa Logo](https://raw.githubusercontent.com/ElliMoty/project-1/master/)
+![Flopa Logo](https://raw.githubusercontent.com/ElliMoty/project-1/master/assets/flopa.jpg)
 
 # Project#1 (Flopa) 
 > Flopa is extracted from *Flo*wers *Pa*radise. It is a online shopping website in gardening which you can buy every thing you need to start your own small paradise in your house or expand it.
 
 ## Start shopping
-Demo [Flopa](https://ellimoty.github.io/project-1/application.html.erb)
+Demo [Flopa](https://flopa.herokuapp.com/)
 
 ### Instructions
    + After signing up you have access to all products. If you can not find your item, search it. 
@@ -24,6 +24,9 @@ Demo [Flopa](https://ellimoty.github.io/project-1/application.html.erb)
   + Scss
   + Jquery
 
+#### Used App
+  + Heroku
+
 #### Learnt method:
   + .group_by 
   + .deleted_at
@@ -31,4 +34,4 @@ Demo [Flopa](https://ellimoty.github.io/project-1/application.html.erb)
 
 
 **Note** Enjoy! Feedback welcome. :blush:
-   + [![twitter](https://github.com/ElliMoty/project-1/blob/master/images/twitter_image.png)](https://twitter.com/ElliMotaghi)
+   + [![twitter](https://github.com/ElliMoty/project-1/blob/master/assets/twitter_image.png)](https://twitter.com/ElliMotaghi)
