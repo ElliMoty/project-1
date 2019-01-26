@@ -1,4 +1,4 @@
-![Flopa Logo](https://github.com/ElliMoty/project-1/blob/master/app/assets/images/logo.jpg)
+![Flopa Logo](https://github.com/ElliMoty/project-1/blob/master/app/assets/images/logo.png)
 Flopa --- Project#1 
 
 ## Overview
