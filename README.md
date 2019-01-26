@@ -1,4 +1,5 @@
 ![Flopa Logo](https://github.com/ElliMoty/project-1/blob/master/app/assets/images/logo.png)
+
 Flopa --- Project#1 
 
 ## Overview
@@ -6,6 +7,7 @@ Flopa --- Project#1
 The name "Flopa" is derived from three and two first letters of *Flo*wers *Pa*radise respectively. It is a online shopping website specifically about plants and gardening required items.
 
 You can see it in action here **[Flopa](https://flopa.herokuapp.com/)**.
+
 Model Graph and process passed **[here](https://docs.google.com/presentation/d/1e6SQGfM0jw2mTIzYj2INqxUQDkh1g_M4gyHgpRkq3rs/edit#slide=id.gc6f8954bc_0_53)**.
  
 ## Tech Used
